@@ -4,7 +4,7 @@ import { fromZodError } from "zod-validation-error";
 const baz = z.number().min(1).optional();
 
 const bar = z.strictObject({
-  baz: z.record(z.string(), z.literal(false).or(baz)).optional(),
+  baz,
 });
 
 const foo = z.strictObject({
